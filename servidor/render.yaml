@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: othello-backend
+    env: docker
+    plan: free
+    dockerfilePath: ./servidor/Dockerfile
