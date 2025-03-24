@@ -1,4 +1,4 @@
-FROM haskell:9.2.8
+FROM haskell:9.6.4
 
 WORKDIR /app
 
