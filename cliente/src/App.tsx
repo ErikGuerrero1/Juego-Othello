@@ -22,7 +22,7 @@ const App = () => {
   // Función para obtener el estado del tablero actual
   const fetchBoard = async () => {
     try {
-      const response = await fetch("http://10.42.0.1:3000/board");
+      const response = await fetch("https://juego-othello.onrender.com/board");
       if (!response.ok) {
         throw new Error("Failed to fetch board data");
       }
@@ -38,7 +38,7 @@ const App = () => {
   // Función para obtener el estado del tablero actual
   const fetchBoard2 = async () => {
     try {
-      const response = await fetch("http://10.42.0.1:3000/boardVariant");
+      const response = await fetch("https://juego-othello.onrender.com/boardVariant");
       if (!response.ok) {
         throw new Error("Failed to fetch board data");
       }
@@ -55,7 +55,7 @@ const App = () => {
   // Función para reiniciar el tablero
   const fetchReinicar = async () => {
     try {
-      const response = await fetch("http://10.42.0.1:3000/reset");
+      const response = await fetch("https://juego-othello.onrender.com/reset");
       if (!response.ok) {
         throw new Error("Failed to fetch board data");
       }
@@ -68,7 +68,7 @@ const App = () => {
   // Función para que la IA realice su movimiento
   const realizarMovimientoIA = async () => {
     try {
-      const response = await fetch("http://10.42.0.1:3000/movementIA");
+      const response = await fetch("https://juego-othello.onrender.com/movementIA");
       if (!response.ok) {
         throw new Error("Error fetching IA move");
       }
@@ -125,7 +125,7 @@ const App = () => {
       console.log(`Jugador seleccionó la celda: Fila ${fila}, Columna ${columna}, Posición: ${posicion}`);
 
       // Enviar el movimiento del jugador al servidor con la posición en la URL
-      const response = await fetch(`http://10.42.0.1:3000/movementPlayerVsIA/${posicion}`, {
+      const response = await fetch(`https://juego-othello.onrender.com/movementPlayerVsIA/${posicion}`, {
         method: "GET", // Método GET con la posición en la URL
       });
 
