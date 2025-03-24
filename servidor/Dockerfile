@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN cabal update && cabal build servidor
+RUN ls -la
+RUN cabal update
+RUN cabal build servidor
 
 CMD ["cabal", "run", "servidor"]
